@@ -43,7 +43,7 @@
   <?php include('templates/header.php'); ?>
 
     <section class="container grey-text">
-      <h4 class="center">Pizza Planet</h4>
+      <h4 class="center">Add a pizza</h4>
       <form class="white" action="add.php" method="POST">
         <label for="">Your e-mail</label>
         <input type="text" name="email">
