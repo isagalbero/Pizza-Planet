@@ -15,7 +15,7 @@
     }
   </style>
 </head>
-  <body class="yellow lighten-4">
+  <body class="pink lighten-4">
     <nav class="white z-depth-0">
       <div class="container">
         <a href="#" class="brand-logo brand-text">Pizza Planet</a>
