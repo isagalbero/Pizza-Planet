@@ -45,7 +45,9 @@
         $error['ingredients'] = 'Ingredients must be a comma separated list';
       }
     }
-  }
+
+
+  } //end of POST checking
 
 ?>
 
