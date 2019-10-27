@@ -1,6 +1,6 @@
 
   <footer class="section">
-    <div class="center grey-text">Copyright @PizzaPlanet2019</div>
+    <div class="center red-text">Copyright @PizzaPlanet2019</div>
   </footer>
 
 </body>
