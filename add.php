@@ -6,6 +6,10 @@
     echo $_GET['ingredients'];
   }
   */
+
+  //Lesson #30
+  include('config/db_connect.php');
+
   $title = $email = $ingredients = '';
   $error = array('email'=>'', 'title'=>'', 'ingredients'=>'');
 
@@ -30,7 +34,7 @@
       $error['title'] = 'Title is empty <br />';
     } else {
       $title = $_POST['title'];
-      if(!preg_match('/^[a-zA-Z\+]$/', $title)){
+      if(!preg_match('/^[a-zA-Z\s]+$/', $title)){
         $error['title'] = 'Title must be letters and spaces only';
       }
     }
@@ -44,6 +48,27 @@
       if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)){
         $error['ingredients'] = 'Ingredients must be a comma separated list';
       }
+    }
+
+    if(array_filter($error)){
+      //echo 'errors in the form';
+    } else {
+
+      $email = mysqli_real_escape_string($connect, $_POST['email']);
+      $title = mysqli_real_escape_string($connect, $_POST['title']);
+      $ingredients = mysqli_real_escape_string($connect, $_POST['ingredients']);
+
+      $sql = "INSERT INTO pizzas(title, email, ingredients) VALUES ('$title', '$email', '$ingredients')";
+
+      //Save to DB and check
+      if(mysqli_query($connect, $sql)){
+        //success
+        header('Location: index.php');
+      } else {
+        //error
+        echo 'query error: ' . mysqli_error($connect);
+      }
+      
     }
 
 

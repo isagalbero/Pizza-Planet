@@ -1,11 +1,7 @@
 <?php
 
-  //connect to database, quatro parametros host, user, password, database
-  $connect = mysqli_connect('localhost', 'isa', 'isa123456', 'pizza_planet');
-  //check the connection
-  if(!$connect){
-    echo 'Connection error: ' . mysqli_connect_error();
-  }
+  include('config/db_connect.php');
+
   // write query for all pizzas
   $sql = 'SELECT title, ingredients, id FROM pizzas ORDER BY date_time';
   //make query and get results
