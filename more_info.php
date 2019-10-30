@@ -3,7 +3,7 @@
   include('config/db_connect.php');
 
   if(isset($_POST['delete'])){
-    $id_to_delete = mysqli_real_escape_string($connect, $_POST['delete']);
+    $id_to_delete = mysqli_real_escape_string($connect, $_POST['id_to_delete']);
     $sql = "DELETE FROM pizzas WHERE id = $id_to_delete";
 
     if(mysqli_query($connect, $sql)){
@@ -43,9 +43,8 @@
     <p><?php echo htmlspecialchars($pizza['ingredients']); ?></p>
 
     <!-- deleting form -->
-
     <form action="more_info.php" method="POST">
-      <input type="hidden" name="id_to_delete" value="<?php echo $pizza['id'] ?>">
+      <input type="hidden" name="id_to_delete" value="<?php echo $pizza['id']; ?>">
       <input type="submit" name="delete" value="Delete" class="btn brand z-depth-4">
     </form>
 
