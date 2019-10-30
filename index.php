@@ -23,7 +23,7 @@
 
 <?php include('templates/header.php'); ?>
 
-<h4 class="center grey-text">Pizzas!</h4>
+<h4 class="center green-text">Pizzas!</h4>
 <div class="container">
   <div class="row">
 
@@ -39,7 +39,7 @@
             </ul>
           </div>
           <div class="card-action right-align">
-            <a href="#" class="brand-text">More Info</a>
+            <a href="more_info.php?id=<?php echo $pizza['id'] ?>" class="brand-text">More Info</a>
           </div>
         </div>
       </div>
