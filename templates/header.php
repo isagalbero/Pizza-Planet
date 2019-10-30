@@ -19,6 +19,13 @@
     h5{
       color: #E5531D !important;
     }
+    .pizza{
+      width:100px;
+      margin: 40px auto -30px;
+      display: block;
+      position: relative;
+      top: -30px;
+    }
   </style>
 </head>
   <body class="green lighten-4">
