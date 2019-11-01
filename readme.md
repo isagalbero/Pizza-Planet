@@ -12,7 +12,7 @@ Clique em 'MORE INFO' para conferir as criações.
 
 ## Contribuições
 
-Contribuições são bem vindas!
+Contribuições são bem-vindas!
 
 ## Agradecimentos
 
