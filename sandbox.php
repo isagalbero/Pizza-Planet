@@ -3,7 +3,17 @@
   //echo $_SERVER['SERVER_NAME'] . '<br />';
   //echo $_SERVER['REQUEST_METHOD'] . '<br />';
 
-  
+  //$quotes = readfile('readme.txt');
+  //echo $quotes;
+
+  $file = 'readme.txt';
+
+  if(file_exists($file)){
+    echo readfile($file);
+    copy($file, 'quote.txt');
+  } else {
+    echo 'File does not exist';
+  }
 
 ?>
 
