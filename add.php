@@ -94,7 +94,7 @@
         <input type="text" name="ingredients" value="<?php echo htmlspecialchars($ingredients) ?>">
         <div class="red-text"><?php echo $error['ingredients'] ?></div>
         <div class="center">
-          <input type="submit" name="submit" value="submit" class="btn brand z-depth-0">
+          <input type="submit" name="submit" value="submit" class="btn brand z-depth-4">
         </div>
       </form>
     </section>
