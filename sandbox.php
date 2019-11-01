@@ -9,9 +9,12 @@
   $file = 'readme.txt';
 
   if(file_exists($file)){
-    echo readfile($file);
+    echo readfile($file) . '<br />';
     copy($file, 'quote.txt');
-  } else {
+    echo realpath($file) . '<br />';
+    echo filesize($file) . '<br />';
+    rename($file, 'readme_renomeado.txt');
+    } else {
     echo 'File does not exist';
   }
 
